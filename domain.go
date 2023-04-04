@@ -261,6 +261,8 @@ type DomainDiskDriver struct {
 	Cache         string                   `xml:"cache,attr,omitempty"`
 	ErrorPolicy   string                   `xml:"error_policy,attr,omitempty"`
 	RErrorPolicy  string                   `xml:"rerror_policy,attr,omitempty"`
+	RetryInterval string                   `xml:"retry_interval,attr,omitempty"`
+	RetryTimeout  string                   `xml:"retry_timeout,attr,omitempty"`
 	IO            string                   `xml:"io,attr,omitempty"`
 	IOEventFD     string                   `xml:"ioeventfd,attr,omitempty"`
 	EventIDX      string                   `xml:"event_idx,attr,omitempty"`
