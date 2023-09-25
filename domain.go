@@ -696,6 +696,10 @@ type DomainInterfaceBandwidth struct {
 	Outbound *DomainInterfaceBandwidthParams `xml:"outbound"`
 }
 
+type OvsParams struct {
+	Ofport uint32 `xml:"ofport"`
+}
+
 type DomainInterfaceVLan struct {
 	Trunk string                   `xml:"trunk,attr,omitempty"`
 	Tags  []DomainInterfaceVLanTag `xml:"tag"`
@@ -785,6 +789,7 @@ type DomainInterface struct {
 	Source              *DomainInterfaceSource      `xml:"source"`
 	Boot                *DomainDeviceBoot           `xml:"boot"`
 	VLan                *DomainInterfaceVLan        `xml:"vlan"`
+	OvsParams           *OvsParams                  `xml:"ovsparam"`
 	VirtualPort         *DomainInterfaceVirtualPort `xml:"virtualport"`
 	IP                  []DomainInterfaceIP         `xml:"ip"`
 	Route               []DomainInterfaceRoute      `xml:"route"`
