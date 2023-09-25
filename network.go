@@ -256,6 +256,7 @@ type Network struct {
 	Domain              *NetworkDomain      `xml:"domain"`
 	DNS                 *NetworkDNS         `xml:"dns"`
 	VLAN                *NetworkVLAN        `xml:"vlan"`
+	OvsParams           *OvsParams          `xml:"ovsparam"`
 	Bandwidth           *NetworkBandwidth   `xml:"bandwidth"`
 	PortOptions         *NetworkPortOptions `xml:"port"`
 	IPs                 []NetworkIP         `xml:"ip"`
@@ -264,6 +265,10 @@ type Network struct {
 	PortGroups          []NetworkPortGroup  `xml:"portgroup"`
 
 	DnsmasqOptions *NetworkDnsmasqOptions
+}
+
+type OvsParams struct {
+	Ofport uint32 `xml:"ofport"`
 }
 
 type NetworkPortOptions struct {
